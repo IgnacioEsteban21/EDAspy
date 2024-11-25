@@ -159,6 +159,7 @@ class EDA(ABC):
         """
 
         history = []
+        BIC_SCORE = []
         not_better = 0
 
         t1 = process_time()
@@ -187,12 +188,14 @@ class EDA(ABC):
             self._truncation()
             self.generation += white_noise  # We add Gaussian white noise for avoiding genetic drift (optional)
             self._update_pm()
-
+            bic_score = BicScore(self.generation)
+            bic = bic_score.score(self.pm)
             self._new_generation()
             self._check_generation(cost_function)
 
             best_mae_local = min(self.evaluations)
             history.append(best_mae_local)
+            BIC_SCORE.append(bic)
 
             best_ind_local = np.where(self.evaluations == best_mae_local)[0][0]
             best_ind_local = self.generation[best_ind_local]
@@ -219,7 +222,7 @@ class EDA(ABC):
         eda_result = EdaResult(self.best_ind_global, self.best_mae_global, len(history) * self.size_gen,
                                history, self.export_settings(), t2-t1)
 
-        return eda_result
+        return eda_result , BIC_SCORE
 
     @property
     def pm(self) -> ProbabilisticModel:
