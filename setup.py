@@ -15,7 +15,7 @@ setuptools.setup(
                 "modules so new research can be easily developed. It also has several benchmarks for comparisons.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    download_url="https://github.com/VicentePerezSoloviev/EDAspy/archive/1.1.4.tar.gz",
+    download_url="https://github.com/IgnacioEsteban21/EDAspy00/blob/main/EDAspy0.tar",
     url="https://github.com/IgnacioEsteban21/EDAspy",
     packages=setuptools.find_packages(),
     classifiers=[
