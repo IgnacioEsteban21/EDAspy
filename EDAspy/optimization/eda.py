@@ -213,6 +213,7 @@ class EDA(ABC):
 
             if output_runtime:
                 print('IT: ', _, '\tBest cost: ', self.best_mae_global)
+                print('BIC SCORE: ',bic)
 
         if self.disp:
             print("\tNFEVALS = " + str(len(history) * self.size_gen) + " F = " + str(self.best_mae_global))
