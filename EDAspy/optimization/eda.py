@@ -3,6 +3,7 @@
 
 import numpy as np
 from abc import ABC
+from pgmpy.estimators import MaximumLikelihoodEstimator, BicScore
 from .eda_result import EdaResult
 from .custom.probabilistic_models import ProbabilisticModel
 from .custom.initialization_models import GenInit
@@ -16,6 +17,8 @@ class EDA(ABC):
     Abstract class which defines the general performance of the algorithms. The baseline of the EDA
     approach is defined in this object. The specific configurations is defined in the class of each
     specific algorithm.
+
+    holololo
     """
 
     _pm = None
