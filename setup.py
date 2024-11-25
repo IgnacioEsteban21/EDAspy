@@ -26,7 +26,7 @@ setuptools.setup(
     ],
     keywords=['EDA', 'estimation', 'bayesian', 'evolutionary', 'algorithm', 'optimization', 'time_series', 'feature',
               'selection', 'semiparametric', 'Gaussian'],
-    python_requires='>=3.8, <3.11',
+    python_requires='>=3.8',
     setup_requires=["networkx", "pandas", "pgmpy", "pyarrow>=9.0.0", "pybnesian>=0.4.3", "scipy", "multiprocess",
                     "matplotlib", "numpy"],
     install_requires=["networkx", "pandas", "pgmpy", "pyarrow>=9.0.0", "pybnesian>=0.4.3", "scipy", "multiprocess",
