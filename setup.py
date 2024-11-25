@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 __version__ = '1.1.4'  # also defined in EDAspy/__init__.py and in conf.py (docs)
 
 setuptools.setup(
-    name="EDAspy",
+    name="EDAspy0",
     version=__version__,
     author="Vicente P. Soloviev",
     author_email="vicente.perez.soloviev@gmail.com",
